@@ -18,5 +18,4 @@ export const addViewToListing={
         const updatedListing = results[0];
         return updatedListing || Boom.notFound(`Listing doesn't exist with id ${id}`);
     }
-       
-    }
+}

@@ -6,8 +6,10 @@ let server;
 
 const start=async()=>{
      server=Hapi.server({
-        port:9000,
-        host:'localhost'
+        port:7000,
+        host:'localhost',
+        router: { stripTrailingSlash: true },
+        routes: { cors: true }
     });
 
     routes.forEach((route)=>server.route(route));
