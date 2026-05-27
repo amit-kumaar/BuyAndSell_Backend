@@ -1,10 +1,14 @@
 import mysql from 'mysql2';
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user:'hapi-server',
-    password:'Amit@/6912',
-    database:'buy-and-sell',
+  host: "localhost",
+  user: "hapi-server",
+  password: "Amit@/6912",
+  database: "buy-and-sell",
+});
+
+connection.on('error', (err) => {
+  console.error('MySQL connection error:', err.message);
 });
 
 export const db ={
